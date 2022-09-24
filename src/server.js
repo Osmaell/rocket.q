@@ -7,11 +7,11 @@ const route = require('./route')
 // importando o módulo path
 const path = require('path')
 
-// criando um server
+// criando um server e 
 // executando o express e guardando no server
 const server = express()
 
-// informando para o express que é o server,
+// informando para o express (que é o server),
 // que a view engine vai ser ejs
 server.set('view engine', 'ejs')
 
