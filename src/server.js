@@ -24,6 +24,13 @@ server.set('view engine', 'ejs')
 */
 server.set('views', path.join(__dirname, 'views'))
 
+/*  Configurando o middleware
+    capturando o conteúdo vindo do formulário,
+    decodificando o conteúdo e passando para o
+    controller.
+*/
+server.use(express.urlencoded({extended: true}))
+
 // informando para o express utilizar o 
 // arquivo route
 server.use(route)
