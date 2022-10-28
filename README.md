@@ -10,4 +10,8 @@
   <li>HTML</li>
   <li>CSS</li>
   <li>JavaScript</li>
+  <li>NodeJS</li>
+  <li>EJS</li>
+  <li>Express</li>
+  <li>SQLite</li>
 </ul>
