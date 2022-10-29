@@ -6,6 +6,7 @@ const initDb = {
     
     async init() {
 
+        // iniciando a conexão com o banco de dados
         const db = await Database();
 
         // dentro do exec deve ser colocado o código para criar a tabela.
@@ -28,10 +29,3 @@ const initDb = {
 
 // chamando o initDb e executando a função init()
 initDb.init();
-
-
-
-
-
-
-
