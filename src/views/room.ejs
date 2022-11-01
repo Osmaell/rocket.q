@@ -34,7 +34,7 @@
                         #<%= roomId %>
                         <img src="/images/copy.svg" alt="Copiar número da sala" >
                     </div>
-                    
+
                     <a href="#" class="button" >
                         <img src="/images/users-white.svg" alt="Criar uma sala" >
                         Criar Sala
@@ -46,7 +46,7 @@
                 
                 <section id="question-form" >
                     <h2>Faça sua pergunta</h2>
-                    <form action="">
+                    <form action="/question/create/<%= roomId %>" method="POST" >
                         
                         <label for="question"  class="sr-only">O que você quer perguntar?</label>
                         <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>

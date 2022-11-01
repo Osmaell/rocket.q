@@ -13,18 +13,10 @@ const route = express.Router()
 route.get('/', (req, res) => {res.render('index', {page: 'enter-room'})})
 route.get('/create-pass', (req, res) => {res.render('index', {page: 'create-pass'})})
 
+route.post('/create-room', roomController.create)
 route.get('/room/:room', roomController.open)
 
-/*  quando colocamos : da forma abaixo, estamos falando
-    para o express que o conteúdo que vai vim é desconhecido
-    ou seja, criando uma variável para receber o conteúdo vindo
-    nessa url.
-*/
-route.post('/question/:room/:question/:action', questionController.index)
-route.post('/create-room', roomController.create)
+route.post('/question/:room/:question/:action', questionController.index);
+route.post('/question/create/:room', questionController.create);
 
-/* 
-    Exportando a constante route para que 
-    outros arquivos possam utilizá-lo.
- */
 module.exports = route
