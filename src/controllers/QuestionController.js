@@ -17,18 +17,22 @@ module.exports = {
             
             if(action == 'delete') {
                 
+                /* excluíndo uma question */
                 await db.run(`DELETE FROM questions WHERE id = ${questionId}`);
 
             } else if (action == 'check') {
 
+                /* marcando como lida uma question */
                 await db.run(`UPDATE questions SET read = 1 WHERE id = ${questionId}`);
 
             }
 
+            res.redirect(`/room/${roomId}`);
+        } else {
+            res.render('passincorrect', {roomId: roomId});
         }
         
 
-        res.redirect(`/room/${roomId}`);
     },
 
     async create(req, res) {
