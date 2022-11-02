@@ -26,7 +26,7 @@ module.exports = {
             ${roomId},
             0
         )`);
-            
+        
         res.redirect(`/room/${roomId}`);
 
     }
