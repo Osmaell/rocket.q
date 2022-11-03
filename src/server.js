@@ -34,8 +34,7 @@ server.use(express.urlencoded({extended: true}))
 // arquivo route
 server.use(route)
 
-// informando para o express utilizar 
-// a pasta public
+// informando para o express utilizar a pasta public
 server.use(express.static("public"))
 
 // definindo porta de escuta para o servidor
